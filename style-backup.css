@@ -1,0 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Finally actual styling */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #393939;
+  font-size: 1.6rem;
+}
+
+::selection {
+  background-color: #ed3182;
+  color: white;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  width: 900px;
+}
+
+
+.logo {
+  width: 10rem;
+  margin-bottom: 11rem;
+}
+
+  .logo__1,
+  .logo__2 {
+    fill:none;
+    stroke:#a9a9a9;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+  }
+
+    .logo__1 {
+      stroke: #991766;
+      stroke-dasharray: 496;
+      stroke-dashoffset: -496;
+    }
+    
+    .logo__2 {
+      stroke: #ed3182;
+      stroke-dasharray: 458;
+      stroke-dashoffset: -458;
+    }
+    
+    @keyframes firstLine {
+      0% { stroke-dashoffset: -496; }
+      90% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; }
+    }
+    
+    @keyframes secondLine {
+      0% { stroke-dashoffset: -458; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+h1,
+.h1-like {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.4;
+}
+
+h2 {
+  margin-bottom: 4rem;
+  max-width: 60rem;
+}
+
+.links {
+  margin-bottom: 12rem;
+}
+
+.link {
+  margin-bottom: 1.6rem;
+}
+
+  .link__tag {
+    color: #ed3182;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+    .link__fade {
+      opacity: 0.4;
+    }
+
+.foot-note {
+  font-size: 1.2rem;
+}
+
+.loaded .logo__1 {
+  animation: firstLine 1.5s ease 0s 1 forwards;
+}
+
+.loaded .logo__2 {
+  animation: secondLine 1.5s ease 0s 1 forwards;
+}
+
+.appear {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 2s ease;
+}
+
+  .loaded .appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 7rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .wrapper {
+    position: static;
+    transform: none;
+    margin: 3rem 4rem 2rem 3rem;
+    width: auto;
+  }
+
+  h1,
+  .h1-like {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo {
+    margin-bottom: 11vh;
+  }
+
+  .links {
+    margin-bottom: 14vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    width: 8rem;
+    margin-bottom: 3rem;
+  }
+
+  h1,
+  .h1-like {
+    font-size: 3rem;
+  }
+
+  .links {
+    margin-bottom: 4rem;
+  }
+}
