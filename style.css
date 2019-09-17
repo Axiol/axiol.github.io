@@ -90,24 +90,24 @@ body {
     .😼 {
       stroke: #991766;
       stroke-dasharray: 496;
-      stroke-dashoffset: -496;
+      stroke-dashoffset: 496;
     }
     
     .😺 {
       stroke: #ed3182;
       stroke-dasharray: 458;
-      stroke-dashoffset: -458;
+      stroke-dashoffset: 458;
     }
     
     @keyframes firstLine {
-      0% { stroke-dashoffset: -496; }
-      90% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 0; }
+      0% { stroke-dashoffset: 496; }
+      90% { stroke-dashoffset: 992; }
+      100% { stroke-dashoffset: 992; }
     }
     
     @keyframes secondLine {
-      0% { stroke-dashoffset: -458; }
-      100% { stroke-dashoffset: 0; }
+      0% { stroke-dashoffset: 458; }
+      100% { stroke-dashoffset: 916; }
     }
 
 .📄,
