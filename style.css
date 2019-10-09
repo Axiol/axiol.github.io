@@ -210,3 +210,22 @@ body {
     margin-bottom: 4rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #38444c;
+    color: #f1f2f4;
+  }
+  
+  .😼 {
+    stroke: #caae17;
+  }
+  
+  .😺 {
+    stroke: #b98e0d;
+  }
+  
+  .🧨 {
+    color: #caae17;
+  }
+}
